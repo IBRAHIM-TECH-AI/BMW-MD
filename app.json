@@ -1,0 +1,91 @@
+{
+  "name": "Phoenix-MD",
+  "version": "1.0.0",
+  "description": "Phoenix-MD Simple WhatsApp Bot",
+  "logo": "https://i.imgur.com/T78fhJk.jpeg",
+  "keywords": ["whatsapp", "bot", "md", "multi-device", "Phoenix", "Phoenix-MD", "wabot", "termux-bot", "sc-bot", "plugins", "AbhishekSuresh", "Whatsapp-bot-md"],
+  "repository": "https://github.com/AbhishekSuresh2/Phoenix-MD",
+  "stack": "container",
+  "env": {
+    "SESSION_ID": {
+      "description": "Enter Your Session ID",
+      "required": true
+    },
+    "PREFIX": {
+      "description": "Enter Prefix For Commands Use Emojis Also",
+      "required": false,
+      "value": "."
+    },
+    "SUDO": {
+      "description": "Enter Numbers With Country Code Without + Separated With , To Add More Numbers",
+      "required": false,
+      "value": "919074692450"
+    },
+    "SPAM_COUNT": {
+      "description": "Enter Number Of Times To Send Spam Message Using .spam Command",
+      "required": false,
+      "value": "10"
+    },
+    "STICKER_DATA": {
+      "description": "Enter Your Sticker PackName And Author Name",
+      "required": false,
+      "value": "🎯𝙿𝚑𝚘𝚎𝚗𝚒𝚡-𝙼𝙳;𝙰𝚋𝚑𝚒𝚜𝚑𝚎𝚔 𝚂𝚞𝚛𝚎𝚜𝚑☘️"
+    },
+    "AUDIO_DATA": {
+      "description": "Enter Your Audio Data",
+      "required": false,
+      "value": "Phoenix-MD;Abhishek Suresh;https://graph.org/file/8976892f2f615077b48cd.jpg"
+    },
+    "OWNER_NAME": {
+      "description": "Enter Your Owner Name",
+      "required": false,
+      "value": "Abhishek Suresh"
+    },
+    "OWNER_NUMBER": {
+      "description": "Enter Your Owner Number",
+      "required": false,
+      "value": "919074692450"
+    },
+    "BOT_NAME": {
+      "description": "Enter Your Bot Name",
+      "required": false,
+      "value": "Phoenix-MD"
+    },
+    "MODE": {
+      "description": "Enter Your Mode Type public For Public Otherwise Type private",
+      "required": false,
+      "value": "public"
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Enter Your Heroku App Name Same As Above You Entered",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Enter Your Heroku Account Api Key. Get It From https://dashboard.heroku.com/account",
+      "required": true
+    },
+    "AUTO_BIO": {
+  "description": "If You Want To Set Automatic Bio Type true. Otherwise, Type false",
+  "value": "false",
+  "required": false
+   },
+    "AUTO_REACT": {
+  "description": "If You Want To React Automatically To Messages Type true. Otherwise, Type false",
+  "value": "false",
+  "required": false
+   },
+    "AUTO_STATUS_READ": {
+      "description": "If You Want To View Status Automatically, Type true. Otherwise, Type false",
+      "required": false,
+      "value": "false"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
