@@ -14,7 +14,7 @@ pnix(
     desc: "Show All commands",
   },
   async (message, match, m) => {
-  message.client.sendMessage(message.jid, { react: { text: "📃", key: m.key } });
+  message.client.sendMessage(message.jid, { react: { text: "🚘", key: m.key } });
     if (match) {
       for (let i of events.commands) {
         if (i.pattern.test(message.prefix + match))
@@ -31,13 +31,13 @@ Description : ${i.desc}\`\`\``
       let currentTime = new Date();
       let runtime = clockString(currentTime - botStartTime);
 
-      let menu = `╭───❮ *${BOT_NAME}* ❯
-│ *ᴏᴡɴᴇʀ* :  ${OWNER_NAME}
-│ *ᴘʀᴇғɪx* : ${prefix}
-│ *ᴘʟᴀᴛғᴏʀᴍ* : ${hostname().split("-")[0]}
-│ *ᴘʟᴜɢɪɴs* : ${events.commands.length} 
-│ *ʀᴜɴᴛɪᴍᴇ* : ${runtime} 
-╰─────────────⦁\n`;
+      let menu = `╭───『 *${BOT_NAME}* 』
+▏✼┊ *ᴏᴡɴᴇʀ* :  ${OWNER_NAME}
+▏✼┊ *ᴘʀᴇғɪx* : ${prefix}
+▏✼┊ *ᴘʟᴀᴛғᴏʀᴍ* : ${hostname().split("-")[0]}
+▏✼┊ *ᴘʟᴜɢɪɴs* : ${events.commands.length} 
+▏✼┊ *ʀᴜɴᴛɪᴍᴇ* : ${runtime} 
+╰─────────────✧\n`;
       let cmnd = [];
       let cmd;
       let category = [];
@@ -63,20 +63,20 @@ Description : ${i.desc}\`\`\``
       });
       cmnd.sort();
       category.sort().forEach((cmmd) => {
-        menu += `╭───❮ *${cmmd}* ❯`;
+        menu += `╭───『 *${cmmd}* 』`;
         let comad = cmnd.filter(({ type }) => type == cmmd);
         comad.forEach(({ cmd }, num) => {
           menu += `\n│  ${cmd.trim()}`;
         });
-        menu += `\n╰─────────────⦁\n`;
+        menu += `\n╰─────────────✧\n`;
       });
 
       menu += ``;
       return await message.client.sendMessage(message.jid, {
-        image: { url: `https://i.ibb.co/tHWJrz3/IMG-20231128-WA0005.jpg` },
+        video: { url: `https://telegra.ph/file/7d07f6bb6562e3c7b9599.mp4` },
         caption: tiny(menu),
         footer: tiny(
-          `Phoenix-MD\nVersion : ${require("../package.json").version}`
+          `BMW-MD\nVersion : ${require("../package.json").version}`
         ),
       });
     }
